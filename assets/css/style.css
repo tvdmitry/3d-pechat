@@ -3927,11 +3927,11 @@ main .scanning .container {
 }
 
 .accordion_items .active .accordion_title img {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .dna_image {
-    width: calc(60% - 1px);
+    width: auto;
     height: auto;
     object-fit: cover;
 }
@@ -4250,7 +4250,7 @@ main .scanning .container {
 }
 
 .vacancies .vacanci_item {
-    width: 41.4%;
+    max-width: 745px;
     position: relative;
 }
 
