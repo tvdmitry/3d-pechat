@@ -2306,6 +2306,10 @@ footer .brand_logo+.footer_text {
     max-width: calc(100% / 5);
 }
 
+.service .lines .col-md-1:last-child {
+  border-right: 1px solid var(--white);
+}
+
 .lines .col-md-1:last-child {
     border-right: 1px solid var(--grey);
 }
