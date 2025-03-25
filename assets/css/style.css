@@ -2436,7 +2436,7 @@ main .scanning .container {
 .help.seal .help_left img {
     top: 0;
     right: 0;
-    left: auto;
+    /* left: auto; */
 }
 
 .help_block {
@@ -2452,7 +2452,7 @@ main .scanning .container {
 
 .help_left {
     position: relative;
-    padding: 110px 48px 0 360px;
+    padding: 149px 48px 0 299px;
 }
 
 .help .section_title {
@@ -2550,7 +2550,7 @@ main .scanning .container {
     grid-gap: 20px;
     margin: auto;
     padding: 0 10px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .portfolio .experience_block {
@@ -2762,7 +2762,7 @@ main .scanning .container {
 
 .control_content.active {
     display: flex;
-    gap: 68px;
+    gap: 236px;
 }
 
 .control_image {
@@ -3107,7 +3107,7 @@ main .scanning .container {
 }
 
 .perform_contents {
-    margin-top: 73px;
+    margin-top: 70px;
 }
 
 .perform_content {
@@ -3142,7 +3142,6 @@ main .scanning .container {
 }
 
 .perform_left p {
-    margin-top: 20px;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -3159,7 +3158,7 @@ main .scanning .container {
     list-style: none;
     padding-left: 28px;
     gap: 30px;
-    margin-top: 52px;
+    margin-top: 40px;
     max-width: 504px;
 }
 
@@ -3188,9 +3187,9 @@ main .scanning .container {
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%;
+    line-height: 127%;
     background: none;
-    margin-top: 83px;
+    margin-top: 70px;
 }
 
 /* examples */
@@ -8837,6 +8836,7 @@ main .scanning .container {
 .perform_image img {
     max-width: fit-content;
     width: 100%;
+    height: 100%;
     margin-bottom: -120px;
 }
 
