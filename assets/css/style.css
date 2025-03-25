@@ -3308,6 +3308,12 @@ main .scanning .container {
 .cases img {
     max-width: fit-content;
     width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cases .fancybox:hover {
+    transform: scale(0.95);
 }
 
 .cases .about_project {
