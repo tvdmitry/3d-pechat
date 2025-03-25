@@ -7917,7 +7917,13 @@ main .scanning .container {
 .blog_main {
     width: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
     margin: 0 0 60px 0;
+    cursor: pointer;
+}
+
+.blog_main:hover {
+  transform: scale(0.95);
 }
 
 .blog_mid .row:has(.blog_item) {
