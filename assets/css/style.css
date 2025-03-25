@@ -191,7 +191,7 @@ header.absolute .header_row {
 .header_contacts {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .absolute .header_contacts {
@@ -204,27 +204,35 @@ header.absolute .header_row {
     font-size: 22.463px;
     line-height: 140%;
     font-weight: 500;
+    white-space: nowrap;
     text-transform: uppercase;
     text-decoration: none;
     color: #CCC;
     margin: 0 0 8px 0;
 }
+
+.tel_wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
 .header_contacts .email_contact{
     font-size: 16px;
     font-weight: 500;
     line-height: 140%;
     color: var(--grey-bg);
+    white-space: nowrap;
     margin: 0 0 12px 0;
     text-decoration: none;
 }
 .header .header_contacts{
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    width: 288px;
+    display: flex;
+   
 }
 .header .header_contacts .email_contact{
     margin: 0;
-    width: 60%;
     text-align: right;
 }
 .header .header_contacts .tel_contact{
@@ -1167,11 +1175,11 @@ footer .brand_logo+.footer_text {
 }
 
 .order .section_title {
-    margin: 0 0 70px 40px;
+    margin: 0 0 16px 40px;
 }
 
 .order .section_title+.desc {
-    margin: 0 0 40px 40px;
+    margin: 0 0 48px 40px;
 }
 
 .order ul {
@@ -2172,7 +2180,7 @@ footer .brand_logo+.footer_text {
     width: 80%;
     overflow: visible;
     clip-path: inset(0 -100vw 0 80px);
-    padding: 0 0 90px 124px;
+    padding: 0 0 110px 124px;
 }
 
 .team_slider .navigation {
@@ -2671,8 +2679,16 @@ main .scanning .container {
 }
 
 /* control */
+.control .container::before {
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid var(--grey);
+  opacity: 0.2;
+  padding-bottom: 140px;
+}
+
 .control .container {
-    padding-bottom: 140px;
+  padding-bottom: 140px;
 }
 
 .control .row {
