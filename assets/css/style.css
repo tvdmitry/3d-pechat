@@ -446,9 +446,10 @@ header.absolute .links_item:hover .menu {
 
 .nav_list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 .nav_item {
@@ -6022,7 +6023,7 @@ main .scanning .container {
 
     /* HERO */
     .hero .container {
-        padding-top: 120px;
+        padding-top: 190px;
         padding-bottom: 50px;
     }
 
@@ -7107,7 +7108,7 @@ main .scanning .container {
     }
 
     .header_left {
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 100%;
     }
 
@@ -7763,6 +7764,20 @@ main .scanning .container {
     .portfolio .experience_block {
         margin: 0 0 48px 0;
     }
+}
+
+@media (max-width: 440px) {
+  .header .header_contacts {
+    display: none;
+  }
+
+  .header_left {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    order: 2;
+  }
 }
 
 @media (max-width: 576px) {
@@ -8465,6 +8480,10 @@ main .scanning .container {
 }
 
 @media (max-width:768px) {
+  .header_nav {
+    display: none;
+  }
+
     .blog_item {
         width: 100%;
     }
@@ -9874,6 +9893,10 @@ main .scanning .container {
     .scanning_infos {
         margin-top: 57px;
         gap: 22px;
+    }
+
+    .hero .container {
+      padding-top: 120px;
     }
 
     .scanning_infos .info_item {
