@@ -8024,7 +8024,7 @@ main .scanning .container {
 
 .blog_navigation {
     border-bottom: 1px solid var(--grey);
-    margin: 50px 20% 0 20%;
+    margin: 50px 0 0 0;
     padding: 0 0 0 40px;
     display: flex;
     align-items: center;
@@ -8263,10 +8263,6 @@ main .scanning .container {
     .blog_item {
         width: calc(33.3% - 10px);
     }
-
-    .blog_navigation .navigation {
-        display: none;
-    }
 }
 
 @media (max-width:1400px) {
@@ -8384,6 +8380,15 @@ main .scanning .container {
 
     .blog_part:last-child .part_right {
         padding: 0;
+    }
+    .blog_navigation .navigation {
+        display: none;
+    }
+    .blog_pagination a,
+    .blog_pagination a.active,
+    .blog_pagination a:last-child,
+    .blog_pagination a:first-child{
+        padding: 10px;
     }
 }
 

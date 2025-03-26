@@ -513,6 +513,69 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.review_tab').first().click()
     }
 
+    if (document.querySelector('.blog_swiper')) {
+        let blogSwiper = new Swiper('.blog_swiper', {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            grid: {
+                rows: 2,
+                fill: 'row'
+            },
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.blog_swiper .next_btn',
+                prevEl: '.blog_swiper .prev_btn'
+            },
+            pagination: {
+                el: '.blog_swiper .blog_pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    let paginationHTML = '';
+                    
+                    for (let i = 1; i <= total; i++) {
+                        paginationHTML += `<a href="#" class="${i === current ? 'active' : ''}" data-index="${i - 1}">${i < 10 ? '0' + i : i}</a>`;
+                    }
+    
+                    document.querySelector('.blog_pagination').innerHTML = paginationHTML;
+    
+                    document.querySelectorAll('.blog_pagination a').forEach(link => {
+                        link.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            blogSwiper.slideTo(parseInt(this.getAttribute('data-index')));
+                        });
+                    });
+    
+                    return paginationHTML;
+                }
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    grid: { rows: 3 }
+                },
+                768: {
+                    slidesPerView: 2,
+                    grid: { rows: 2 },
+                    spaceBetween: 20,
+                },
+                1440: {
+                    slidesPerView: 3,
+                    grid: { rows: 2 },
+                    spaceBetween: 15,
+                },
+                1640: {
+                    spaceBetween: 50,
+                }
+            }
+        });
+        document.querySelector('.blog_pagination').addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                e.preventDefault();
+                let index = parseInt(e.target.getAttribute('data-index'));
+                blogSwiper.slideTo(index);
+            }
+        });
+    }
     if ($('.blog_navigation').length) {
         $('.blog_pagination a').click(function (e) {
             e.preventDefault()
