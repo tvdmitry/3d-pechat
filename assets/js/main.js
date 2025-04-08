@@ -47,6 +47,27 @@ document.addEventListener('DOMContentLoaded', function () {
 		tabPerformFunction($(this))
 	})
 
+	function tabSolveFunction(tabContainer) {
+		let tabs = tabContainer.find('.perform_tab-wishes')
+		let contents = tabContainer
+			.closest('.container')
+			.find('.perform_contents-wishes .perform_content-wishes')
+
+		tabs.on('click', function () {
+			let index = $(this).index()
+
+			tabs.removeClass('active')
+			contents.removeClass('active').hide()
+
+			$(this).addClass('active')
+			contents.eq(index).addClass('active').fadeIn(300)
+		})
+	}
+
+	$('.perform_tabs-wishes').each(function () {
+		tabSolveFunction($(this))
+	})
+
 	// const performTab = $('.perform_tab');
 	// const performContent = $('.perform_content');
 	// if (performTab.length > 0) {
