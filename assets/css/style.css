@@ -3951,6 +3951,11 @@ main .scanning .container {
 	padding-bottom: 40px;
 }
 
+.contacts_map {
+	width: 100%;
+	height: 100%;
+}
+
 .contacts_texts {
 	width: calc(20% - 20px);
 }
@@ -10199,6 +10204,11 @@ main .scanning .container {
 		width: 100%;
 	}
 
+	.contacts iframe {
+		width: 100% !important;
+		height: 400px !important;
+	}
+
 	.contacts_image {
 		max-width: 100%;
 		width: 100%;
@@ -10662,10 +10672,6 @@ main .scanning .container {
 
 	.contacts_row {
 		position: relative;
-	}
-
-	.contacts .section_title {
-		margin-top: 335px;
 	}
 
 	.contacts_image {
