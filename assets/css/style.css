@@ -465,6 +465,14 @@ header.absolute .links_item:hover .menu {
 	display: flex;
 }
 
+.presentation .lines .col-md-1 {
+	border-color: #fff !important;
+}
+
+.presentation .lines {
+	z-index: 0 !important;
+}
+
 .menu_content .inner_menu_title::after {
 	position: absolute;
 	content: '';
