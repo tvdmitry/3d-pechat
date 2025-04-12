@@ -1351,6 +1351,10 @@ footer .social a:hover path {
 	padding-top: 140px;
 }
 
+.perform_content-main {
+	padding-bottom: 0 !important;
+}
+
 /* .advantage + .control .container{
     padding-bottom: 140px;
 } */
@@ -2895,7 +2899,6 @@ main .scanning .container {
 	padding-bottom: 140px;
 	padding-left: 0;
 	padding-right: 0;
-	padding-top: 140px;
 	border-left: 1px solid var(--border-color);
 	border-right: 1px solid var(--border-color);
 }
@@ -3471,8 +3474,12 @@ main .scanning .container {
 	padding: 0 40px;
 }
 
-.perform-plastic-wrapper {
+/* .perform-plastic-wrapper {
 	padding-bottom: 140px;
+} */
+
+.experience_wrapper {
+	padding-top: 140px;
 }
 
 .perform_tabs {
@@ -3524,6 +3531,7 @@ main .scanning .container {
 }
 
 .perform_content {
+	padding-bottom: 140px;
 	display: none;
 }
 
@@ -3962,7 +3970,14 @@ main .scanning .container {
 
 .contacts_row {
 	display: flex;
+	gap: 90px;
 	justify-content: space-between;
+}
+
+@media (max-width: 1640px) {
+	.contacts_row {
+		gap: 20px;
+	}
 }
 
 .contacts .section_title {
@@ -4646,8 +4661,9 @@ main .scanning .container {
 	transform: translate(0, -50%);
 	width: 24px;
 	height: 24px;
-	background-image: url(../images/icon/hot.svg);
-	background-size: 24px;
+	background-repeat: no-repeat;
+	background-image: url(../images/hot.svg);
+	background-size: contain;
 }
 
 .vacanci_title {
@@ -4847,6 +4863,10 @@ main .scanning .container {
 }
 
 .sale_section .container .breadcrumbs {
+	margin-bottom: 40px;
+}
+
+.vacancies .container .breadcrumbs {
 	margin-bottom: 40px;
 }
 
@@ -8613,7 +8633,8 @@ main .scanning .container {
 
 .blog_right {
 	width: 20%;
-	padding: 140px 40px 0 40px;
+	height: fit-content;
+	padding: 40px;
 	background-color: var(--grey-bg);
 }
 
