@@ -1346,7 +1346,8 @@ footer .social a:hover path {
 	/* padding-top: 140px; */
 	padding-bottom: 140px;
 }
-.guarantee + .advantage .container {
+
+.advantage-wrapper {
 	padding-top: 140px;
 }
 
@@ -1575,7 +1576,6 @@ footer .social a:hover path {
 	position: relative;
 	z-index: 1;
 	background-color: #32323c;
-	margin-bottom: 140px;
 }
 
 .portofilo:has(+ .quality) {
@@ -2349,7 +2349,6 @@ footer .social a:hover path {
 /* statistics2 */
 .statistics2 {
 	position: relative;
-	margin: 0 0 140px 0;
 }
 
 /* .statistics2 + .control .container{
@@ -3063,13 +3062,14 @@ main .scanning .container {
 	padding-bottom: 140px;
 }
 
-.control .container {
-	padding-bottom: 140px;
-}
-
 .control .row {
 	padding-left: 40px;
 	gap: 25px;
+}
+
+.company-wrapper {
+	padding-top: 140px;
+	padding-bottom: 140px;
 }
 
 /* .control .container {
@@ -3469,6 +3469,9 @@ main .scanning .container {
 	border-left: 1px solid var(--border-color);
 	border-right: 1px solid var(--border-color);
 	padding: 0 40px;
+}
+
+.perform-plastic-wrapper {
 	padding-bottom: 140px;
 }
 
@@ -9038,7 +9041,6 @@ main .scanning .container {
 
 .materials {
 	background: #eceef1;
-	margin-bottom: 140px;
 }
 
 .materials .container {
@@ -9428,7 +9430,7 @@ main .scanning .container {
 /* litei */
 .litei_section {
 	position: relative;
-	margin: 0 0 93px 0;
+	/* margin: 0 0 93px 0; */
 }
 
 .litei_section::after {
