@@ -91,6 +91,10 @@ select {
 	display: none;
 }
 
+.experience2 .container .row {
+  padding-top: 140px;
+}
+
 .experience-wrapper {
 	padding-top: 140px;
 }
@@ -2984,10 +2988,10 @@ main .scanning .container {
 	opacity: 0;
 } */
 
-.experience_item:hover::after {
+/* .experience_item:hover::after {
 	color: var(--white);
 	background-image: url(../images/icon/experience-arow.svg);
-}
+} */
 
 .experience_item:hover::before {
 	opacity: 1;
@@ -2998,11 +3002,12 @@ main .scanning .container {
 	position: absolute;
 	left: 36px;
 	bottom: 20px;
-	color: transparent;
+	color: var(--white);
 	transition: 0.3s all ease;
 	width: 107px;
 	background-repeat: no-repeat;
 	background-position: right;
+	background-image: url(../images/icon/experience-arow.svg);
 }
 
 .experience_item.wide {
