@@ -87,12 +87,12 @@ select {
 	font: inherit;
 }
 
-.experience .container {
-  padding-top: 140px;
-}
-
 .help_block-image-target {
 	display: none;
+}
+
+.experience-wrapper {
+	padding-top: 140px;
 }
 
 .wrapper {
