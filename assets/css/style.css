@@ -3177,7 +3177,7 @@ main .scanning .container {
 
 .control_content.active {
 	display: flex;
-	gap: 236px;
+	gap: 68px;
 }
 
 .control_image {
@@ -5107,7 +5107,7 @@ main .scanning .container {
 }
 
 .blog .container .lines {
-  width: 99%;
+	width: 99%;
 }
 
 .yandex_block {
