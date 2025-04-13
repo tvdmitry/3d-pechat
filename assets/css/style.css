@@ -5106,6 +5106,10 @@ main .scanning .container {
 	margin: 48px 0 0 0;
 }
 
+.blog .container .lines {
+  width: 99%;
+}
+
 .yandex_block {
 	display: flex;
 	align-items: flex-end;
