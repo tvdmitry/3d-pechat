@@ -5017,6 +5017,7 @@ main .scanning .container {
 
 /* REVIEW PAGE */
 .review_section .container {
+	padding-left: 40px;
 	padding-top: 40px;
 	padding-bottom: 140px;
 }
@@ -5032,7 +5033,10 @@ main .scanning .container {
 
 .review_left {
 	width: 20%;
-	padding: 0 0 0 40px;
+}
+
+.review_section .container .breadcrumbs {
+	margin-bottom: 40px;
 }
 
 .review_left .page_title {
@@ -5040,7 +5044,8 @@ main .scanning .container {
 }
 
 .review_left .section_title {
-	margin: 0 0 76px 0;
+	margin-bottom: 76px;
+	max-width: 309px;
 }
 
 .review_right {
@@ -5078,6 +5083,14 @@ main .scanning .container {
 	padding: 12px 0;
 }
 
+.review_content {
+	display: none;
+}
+
+.review_content.active {
+	display: block;
+}
+
 .review_tab span {
 	width: 29px;
 	height: 29px;
@@ -5089,6 +5102,7 @@ main .scanning .container {
 }
 
 .review_contents {
+	min-height: 600px;
 	margin: 48px 0 0 0;
 }
 

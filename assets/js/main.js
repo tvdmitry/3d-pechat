@@ -542,24 +542,33 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	if ($('.review_tabs').length) {
-		$('.review_tab').click(function (e) {
-			e.preventDefault()
-			let $index = $(this).index()
-			$(this).addClass('active')
-			$(this).siblings().removeClass('active')
+		const $tabs = $('.review_tab')
+		const $contents = $('.review_right .review_content')
 
-			$(this)
-				.closest('.review_right')
-				.find('.review_content')
-				.fadeOut()
+		$tabs.first().addClass('active')
+		$contents.first().addClass('active').css('display', 'block')
+
+		$tabs.on('click', function (e) {
+			e.preventDefault()
+
+			const $this = $(this)
+			const index = $this.index()
+
+			if ($this.hasClass('active')) {
+				return
+			}
+
+			$tabs.removeClass('active')
+			$this.addClass('active')
+
+			$contents.filter(':visible').fadeOut(200, function () {
+				$contents.eq(index).fadeIn(200).addClass('active')
+			})
+			$contents
+				.not(':eq(' + index + ')')
 				.removeClass('active')
-			$(this)
-				.closest('.review_right')
-				.find('.review_content')
-				.eq($index)
-				.fadeIn()
+				.css('display', 'none')
 		})
-		$('.review_tab').first().click()
 	}
 
 	if (document.querySelector('.blog_swiper')) {
