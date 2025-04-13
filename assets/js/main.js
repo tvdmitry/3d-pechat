@@ -446,19 +446,28 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		})
 	}
+
 	if ($('.calculator').length) {
 		$('.calculator__category').on('click', function () {
-			$(this).addClass('active')
-			$(this).siblings().removeClass('active')
+			let $this = $(this)
+			if ($this.hasClass('active')) return
 
-			let $parentBlock = $(this).closest('.calc_block')
-			let index = $(this).index()
-			let $contents = $parentBlock.find('.calculator_content')
+			$this.addClass('active').siblings().removeClass('active')
 
-			$contents.fadeOut(200, function () {
-				$contents.removeClass('active')
+			let $parentBlock = $this.closest('.calc_block')
+			let index = $this.index()
+			let $contents = $parentBlock.find(
+				'.calculator_content_wrap .calculator_content'
+			)
+
+			$contents.filter('.active').fadeOut(200, function () {
+				$(this).removeClass('active')
+				$contents
+					.eq(index)
+					.addClass('active')
+					.css('display', 'flex')
+					.fadeIn(200)
 			})
-			$contents.eq(index).css('display', 'flex').fadeIn(200)
 
 			if ($(window).width() < 992) {
 				$('.calculator__sidebar').hide()
@@ -468,18 +477,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.calculator__subcategory').on('click', function () {
 			let $this = $(this)
+			if ($this.hasClass('active')) return
+
 			let $parentBlock = $this.closest('.calculator_content')
 			let index = $this.index()
 			let $contents = $parentBlock.find('.table_item')
 
-			if (!$this.hasClass('active')) {
-				$this.addClass('active').siblings().removeClass('active')
+			$this.addClass('active').siblings().removeClass('active')
 
-				$contents.filter('.active').fadeOut(200, function () {
-					$(this).removeClass('active')
-					$contents.eq(index).fadeIn(200).addClass('active')
-				})
-			}
+			$contents.filter('.active').fadeOut(200, function () {
+				$(this).removeClass('active')
+				$contents.eq(index).fadeIn(200).addClass('active')
+			})
 		})
 	}
 
