@@ -92,7 +92,7 @@ select {
 }
 
 .experience2 .container .row {
-  padding-top: 140px;
+	padding-top: 140px;
 }
 
 .experience-wrapper {
@@ -5350,6 +5350,7 @@ main .scanning .container {
 
 .portfolio .container {
 	padding-top: 40px;
+	padding-left: 40px;
 	padding-bottom: 116px;
 }
 
@@ -5367,9 +5368,12 @@ main .scanning .container {
 	overflow-wrap: break-word;
 }
 
+.portfolio_descr {
+	padding-left: 0;
+}
+
 .portfolio_left {
 	width: 20%;
-	padding: 0 0 0 40px;
 }
 
 .portfolio .section_title {
