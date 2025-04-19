@@ -263,12 +263,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// portofilo_swiper
 	if (document.querySelector('.portofilo_swiper')) {
-		var portofiloSwiper = new Swiper('.portofilo_swiper', {
+		new Swiper('.portofilo_swiper', {
 			spaceBetween: 32,
 			slidesPerView: 1,
-			lidesPerGroup: 1,
-			loop: true,
-			watchSlidesProgress: true,
+			loop: false,
+			centeredSlides: true,
 			navigation: {
 				nextEl: '.navigation .next_btn',
 				prevEl: '.navigation .prev_btn',
@@ -278,40 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					slidesPerView: 'auto',
 				},
 			},
-			on: {
-				slideChangeTransitionStart: function () {
-					setTimeout(updateSlidePosition, 50)
-				},
-			},
 		})
-
-		function updateSlidePosition() {
-			// console.log(portofiloSwiper.getTranslate());
-			if (window.innerWidth < 1640) return
-
-			let activeSlide = document.querySelector(
-				'.portofilo_swiper .swiper-slide-active'
-			)
-			if (activeSlide) {
-				let swiperWrapper = document.querySelector(
-					'.portofilo_swiper .swiper-wrapper'
-				)
-
-				let prevSlide = activeSlide.previousElementSibling
-				let prevSlideWidth = prevSlide ? prevSlide.offsetWidth : 448
-				let translateX = prevSlideWidth + 29
-
-				let currentTransform = swiperWrapper.style.transform
-				let currentTranslateX = currentTransform.match(/-?\d+/g)
-				currentTranslateX = currentTranslateX
-					? parseInt(currentTranslateX[0])
-					: 0
-
-				let newTranslateX = -currentTranslateX + -translateX
-
-				swiperWrapper.style.transform = `translateX(${newTranslateX}px)`
-			}
-		}
 	}
 
 	if ($('.quality_item').length && $(window).width() < 768) {
